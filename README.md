@@ -1,3 +1,15 @@
-# Документация
+## Верстка анкеты
 
-Документация к данной сборке доступна по ссылке [https://github.com/ninelines-team/ninelines-docs](https://github.com/ninelines-team/ninelines-docs).
+## Документация
+
+### Минимальные требования
+
+* node >= 9.5.0
+* npm >= 5.6.0
+* gulp >= 4.0.0
+* gulp-cli >= 2.0.1
+
+
+Запустить ли `npm install` 
+
+Теперь можно запустить `gulp` и приступить к работе.
