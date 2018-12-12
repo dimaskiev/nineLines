@@ -3,6 +3,7 @@ bower_components/
 build/
 node_modules/
 zip/
+mackets/
 .DS_Store
 aero-debug.log
 aero-deploy.tar.gz
