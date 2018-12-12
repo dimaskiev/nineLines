@@ -1,7 +1,27 @@
 extends pug/base
 
-append vars
-	//- ...
+append vars	
+	include pug/variables/variables
 
 block content
-	p index page
+	.grid-container
+		section.info
+			.cell.medium-6.large-4
+				img(src="images/avatar.png", alt="Photo")
+			.cell.medium-6.large-8
+				each info in infolines
+					.info__line
+						.info__line--label
+							span= info
+						.info__line--input
+		
+		section.skills
+			.cell.large-12
+				ul.skills__list
+					each skills in db_array				
+						li.skills--item
+							fieldset.fieldset
+								input(type="checkbox" id=skills.id)
+								label(for=skills.id)= skills.title
+		
+		sectin.slider
