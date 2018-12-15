@@ -1,0 +1,52 @@
+.sliderjs{
+    .header__section{
+        margin-bottom: 20px;
+    }
+    @media screen and (max-width:640px) {
+        @include flex;
+        justify-content: center;
+
+        .header__section{
+            text-align: center;
+        }
+    }  
+}
+
+.sliderjs__img{
+    position: relative;
+    @media screen and (max-width:640px) {
+        @include flex;
+        justify-content: center;
+        margin-bottom: 35px;
+    }
+}
+
+.sliderjs__info{
+    @media screen and (max-width:640px) {
+        @include flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}
+.sliderjs__data{
+
+    font-family: $font-family-roboto;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 22.008px;
+    color:  #0093d7;
+    @media screen and (max-width:640px) {
+        text-align: center
+
+    }
+   
+}
+
+.arrow{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 57px;
+    height: 39px;
+}

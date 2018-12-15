@@ -1,27 +1,42 @@
 extends pug/base
 
 append vars	
-	include pug/variables/variables
+	include pug/variables/_variables
 
 block content
-	.grid-container
-		section.info
-			.cell.medium-6.large-4
-				img(src="images/avatar.png", alt="Photo")
-			.cell.medium-6.large-8
-				each info in infolines
-					.info__line
-						.info__line--label
-							span= info
-						.info__line--input
-		
-		section.skills
-			.cell.large-12
-				ul.skills__list
-					each skills in db_array				
-						li.skills--item
-							fieldset.fieldset
-								input(type="checkbox" id=skills.id)
-								label(for=skills.id)= skills.title
-		
-		sectin.slider
+	.wrapper
+		.container
+			section.grid-x.info
+				.cell.medium-3.large-3.cell--img
+					.avatar.align-center-middle
+						img.avatar__img(src="images/avatar.png", alt="Photo")
+				.cell.small-12.medium-9.large-9.cell--info
+					each info in infolines
+						.grid-x.info__line
+							span.info__line--label= info.title
+							span.info__line--data= info.data
+					.cell.stamp
+						img(src="images/stamp.png", alt="stamp")
+				
+			section.grid-x.skills
+				h2.header__section Навыки
+				.cell.large-12
+				
+						ul.no-bullet.skills__list
+							each skills in db_array				
+								li.skills__item.align-middle
+									if (skills.checked)
+										input(type="checkbox" id=skills.id class="checkbox" checked)
+										span.checkbox__fake.checked
+									else if !(skills.checked)
+										input(type="checkbox" id=skills.id class="checkbox")
+										span.checkbox__fake
+									span.checkbox__text= skills.title
+			
+			section.grid-x.sliderjs
+				.cell.small-12.medium-6.large-6.sliderjs__img
+					img.slider-img(src="images/slider.svg", alt="slider")
+					img(src="images/arrow.svg", alt="slider" class="arrow")
+				.cell.small-12.medium-4.large-4.sliderjs__info
+					h2.header__section Мой уровень владения Java Script
+					span.sliderjs__data 76
