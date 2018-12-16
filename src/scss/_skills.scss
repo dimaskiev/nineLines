@@ -1,57 +1,53 @@
+.skills {
+	.header__section {
+		margin-bottom: 17px;
+	}
 
-.skills{
-    .header__section{
-        margin-bottom: 17px;
-    }
-}
-.skills__list{
-    column-count: 4;
-    @media screen and (max-width:640px) {
-        column-count: 3;
-      }
+	&__list {
+		column-count: 4;
 
-      @media screen and (max-width:400px) {
-        column-count: 2;
-      }
+		@media screen and (max-width: 640px) {
+			column-count: 3;
+		}
 
-}
+		@media screen and (max-width: 400px) {
+			column-count: 2;
+		}
+	}
 
-.skills__item{
-    width: 100%;
-    margin-bottom:40px;
-    
-    &:hover{
-        cursor: pointer;
-    }
-}
+	&__item {
+		margin-bottom: 40px;
+		width: 100%;
 
-
-
-.checkbox{
-    position: absolute;
-    left: -1000px;
-    
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
 
-.checkbox__fake{
-    width: 19px;
-    height: 19px;
-    margin: 8px;
-    @include sprite("checkbox");
-    
+.checkbox {
+	position: absolute;
+	left: -1000px;
+
+	&__fake {
+		@include sprite("checkbox");
+
+		margin: 8px;
+		width: 19px;
+		height: 19px;
+	}
+
+	&__text {
+		font-family: $font-family-roboto;
+		font-weight: 500;
+		font-size: $font-size-text;
+		line-height: 22.008px;
+		text-align: left;
+		text-transform: uppercase;
+		color: $color-dovegray;
+	}
 }
 
 .checked {
-    @include sprite("checked");
-}
-
-
-.checkbox__text{
-    font-family: $font-family-roboto;
-    font-size: $font-size-text;
-    font-weight: 500;
-    line-height: 22.008px;
-    text-align: left;
-    text-transform: uppercase;
-    color: $color-text;
+	@include sprite("checked");
 }

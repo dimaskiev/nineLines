@@ -1,76 +1,73 @@
-.sliderjs{
+.sliderjs {
+	@include flex;
 
-    @include flex;
-    flex-direction: row;
-    justify-content: center;
-    .header__section{
-        margin-bottom: 20px;
-    }
-    @media screen and (max-width:640px) {
-        @include flex;
-        justify-content: center;
+	flex-direction: row;
+	justify-content: center;
 
-        .header__section{
-            text-align: center;
-        }
-    } 
+	.header__section {
+		margin-bottom: 20px;
+	}
 
-    &__info{
-
-        @include flex;
-        
-        flex-direction: column;
-        justify-content: center;
-
-    }
-    
-    
-    &__img{
-        position: relative;
-        @media screen and (max-width:640px) {
-            @include flex;
-            justify-content: center;
-            margin-bottom: 35px;
-        }
-    }
-
-    
-
-    &__counter{
-
-        font-family: $font-family-roboto;
-        font-size: 50px;
-        font-weight: 900;
-        line-height: 22.008px;
-        color: $color-blue;
-        @media screen and (max-width:640px) {
-            text-align: center
-    
-        }
-       
-    }
-
-    &__wrapper {
+	&__wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+	}
+
+	&__info {
+		@include flex;
+
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__img {
+		position: relative;
+
+		@media screen and (max-width: 640px) {
+			@include flex;
+
+			justify-content: center;
+			margin-bottom: 35px;
+		}
+	}
+
+	&__counter {
+		font-family: $font-family-roboto;
+		font-weight: 900;
+		font-size: 50px;
+		line-height: 22.008px;
+		color: $color-blue;
+
+		@media screen and (max-width: 640px) {
+			text-align: center;
+		}
+	}
+
+	@media screen and (max-width: 640px) {
+		@include flex;
+
+		justify-content: center;
+
+		.header__section {
+			text-align: center;
+		}
 	}
 }
 
 .level {
 	position: relative;
 	margin: 20px 0;
-	&__arrow{
+
+	&__arrow {
 		position: absolute;
 		left: 0;
 		top: 0;
+
 		&__path {
-			transition-timing-function: linear;
 			transform: rotate(0deg) translate(-190px, -621.969px);
 			transform-origin: 131px 124px;
+			transition-timing-function: linear;
 		}
 	}
-	
-	
 }
-

@@ -1,68 +1,63 @@
+.avatar {
+	@include flex;
 
+	overflow: hidden;
+	margin-right: 22px;
+	border-radius: 50%;
+	width: 138px;
+	height: 138px;
 
-.cell--img{
-    @include flex;
-    justify-content: center;
-    
-}
-/*Avatar */
-.avatar{
-    @include flex;
-    width: 138px;
-    height: 138px;
-    margin-right:22px;
-    border-radius: 50%; 
-    overflow: hidden;
-    @media screen and (max-width:640px){
-        width: 138px;
-        height: 138px;
-        margin-bottom: 25px;
-    }
+	@media screen and (max-width: 640px) {
+		margin-bottom: 25px;
+		width: 138px;
+		height: 138px;
+	}
 }
 
-/*Info */
+.cell--img {
+	@include flex;
 
-
-.info__line--label{
-    font-family: $font-family-roboto;
-    font-size: $font-size-text;
-    font-weight: 500;
-    line-height: 22.008px;
-    text-align: left;
-    text-transform: uppercase;
-    color: $color-text;
-}
-.info__line{
-    position: relative;
-    margin-bottom: 28px;
-    &::before{
-        position: absolute;
-        content: "";
-        bottom: -4px;
-        border-bottom: 2px solid black;
-        width: 100%;
-
-    }
+	justify-content: center;
 }
 
+.info__line {
+	position: relative;
+	margin-bottom: 28px;
 
-.info__line--data{
-    font-family: $font-family-roboto;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22.008px;
-    text-align: left;
-    text-transform: uppercase;
-    color: $color-text;
-    padding-left: 25px;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -4px;
+		border-bottom: 2px solid $color-black;
+		width: 100%;
+	}
+
+	&--label {
+		font-family: $font-family-roboto;
+		font-weight: 500;
+		font-size: $font-size-text;
+		line-height: 22.008px;
+		text-align: left;
+		text-transform: uppercase;
+		color: $color-dovegray;
+	}
+
+	&--data {
+		padding-left: 25px;
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22.008px;
+		text-align: left;
+		text-transform: uppercase;
+		color: $color-dovegray;
+	}
 }
 
-
-
-.stamp{
-    position: absolute;
-    right: 5px;
-    bottom: 28px;
-    width: 184px;
-    height: 166px; 
+.stamp {
+	position: absolute;
+	right: 5px;
+	bottom: 28px;
+	width: 184px;
+	height: 166px;
 }

@@ -8,50 +8,47 @@ html {
 	box-sizing: border-box;
 }
 
-
-.wrapper{
+.wrapper {
 	@include flex;
-	justify-content: center;
-	background-color:$color-background;
-	padding-top: 60px;
 
-	@media screen and (max-width:640px){
+	justify-content: center;
+	padding-top: 60px;
+	background-color: $color-gallery;
+
+	@media screen and (max-width: 640px) {
 		padding-top: 40px;
 	}
-	
-	@media screen and (max-width:420px){
+
+	@media screen and (max-width: 420px) {
 		padding-top: 0;
-    }
+	}
 }
 
-.container{
+.container {
 	@include flex;
-    flex-direction: column;
-	align-items: center;	
-	width: 660px;
 
+	flex-direction: column;
+	align-items: center;
+	width: 660px;
 }
 
-section{
+section {
 	position: relative;
-	width: 100%;
 	margin-bottom: 2px;
 	padding: 38px 20px;
-	background-image: url(../images/bg-section.jpg);
+	width: 100%;
+	background-image: url("../images/bg-section.jpg");
 
-	@media screen and (max-width:640px){
+	@media screen and (max-width: 640px) {
 		padding: 28px 15px;
-    }
+	}
 }
 
-.header__section{
+.header__section {
 	font-family: $font-family-roboto;
-    font-size: $font-size-header;
-    font-weight: 500;
-    line-height: 22.008px;
-    text-align: left;
-	color: $color-header;	
+	font-weight: 500;
+	font-size: $font-size-header;
+	line-height: 22.008px;
+	text-align: left;
+	color: $color-black;
 }
-
-
-
