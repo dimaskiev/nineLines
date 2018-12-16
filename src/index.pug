@@ -1,6 +1,6 @@
 extends pug/base
 
-append vars	
+append vars
 	include pug/variables/_variables
 
 block content
@@ -9,33 +9,33 @@ block content
 			section.grid-x.info
 				.cell.medium-3.large-3.cell--img
 					.avatar.align-center-middle
-						img.avatar__img(src="images/avatar.png", alt="Photo")
+						img.avatar__img(src="images/avatar.png" alt="Photo")
 				.cell.small-12.medium-9.large-9.cell--info
 					each info in infolines
 						.grid-x.info__line
 							span.info__line--label= info.title
 							span.info__line--data= info.data
 					.cell.stamp
-						img(src="images/stamp.png", alt="stamp")
-				
+						img(src="images/stamp.png" alt="stamp")
+			
 			section.grid-x.skills
 				h2.header__section Навыки
 				.cell.large-12
-				
-						ul.no-bullet.skills__list
-							each skills in db_array				
-								li.skills__item.align-middle
-									if (skills.checked)
-										input(type="checkbox" id=skills.id class="checkbox" checked)
-										span.checkbox__fake.checked
-									else if !(skills.checked)
-										input(type="checkbox" id=skills.id class="checkbox")
-										span.checkbox__fake
-									span.checkbox__text= skills.title
+					ul.no-bullet.skills__list
+						each skills in db_array
+							li.skills__item.align-middle
+								if (skills.checked)
+									input.checkbox(type="checkbox" id=skills.id checked)
+									span.checkbox__fake.checked
+								else if !(skills.checked)
+									input.checkbox(type="checkbox" id=skills.id)
+									span.checkbox__fake
+								span.checkbox__text= skills.title
+			
 			section.grid-x.sliderjs
 				.cell.small-12.medium-6.large-6.sliderjs__wrapper
 					.level
-						img(src="images/slider.svg", alt="Js level")
+						img(src="images/slider.svg" alt="Js level")
 						.level__arrow
 							<svg id="level" xmlns="http://www.w3.org/2000/svg" width="253.031" height="133.031" viewBox="0 0 253.031 133.031">
 								<path class="level__arrow__path" d="M329.273,745.717a9.054,9.054,0,0,1-8.889,9.437L265.5,748.077l54.267-11.5h0a9.469,9.469,0,0,1,9.509,9.143h0Z" transform="translate(-190 -621.969)"/>
@@ -43,4 +43,4 @@ block content
 
 				.cell.small-12.medium-4.large-4.sliderjs__info
 					h2.header__section Мой уровень владения Java Script
-					.sliderjs__counter(data-from="0" data-to="95" data-max="100") 0	
+					.sliderjs__counter(data-from="0" data-to="95" data-max="100") 0
