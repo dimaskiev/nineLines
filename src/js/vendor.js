@@ -1,4 +1,4 @@
-import '@babel/polyfill';
+import 'babel-polyfill';
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import Foundation from 'foundation-sites';
@@ -13,3 +13,4 @@ require('ninelines-ua-parser');
 Foundation.addToJquery($);
 
 $(document).foundation();
+

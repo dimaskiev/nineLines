@@ -14,6 +14,14 @@ html {
 	justify-content: center;
 	background-color:$color-background;
 	padding-top: 60px;
+
+	@media screen and (max-width:640px){
+		padding-top: 40px;
+	}
+	
+	@media screen and (max-width:420px){
+		padding-top: 0;
+    }
 }
 
 .container{
@@ -42,8 +50,7 @@ section{
     font-weight: 500;
     line-height: 22.008px;
     text-align: left;
-	color: $color-header;
-	
+	color: $color-header;	
 }
 
 
